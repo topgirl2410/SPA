@@ -1,0 +1,34 @@
+{
+  "name": "spa",
+  "version": "1.0.0",
+  "description": "Spa en scss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/topgirl2410/SPA.git"
+  },
+  "author": "Maria Leonor Pinto Sabater",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/topgirl2410/SPA/issues"
+  },
+  "homepage": "https://github.com/topgirl2410/SPA#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.0.1",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.4.12",
+    "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "cssnano": "^5.1.5"
+  }
+}
