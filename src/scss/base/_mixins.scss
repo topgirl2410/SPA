@@ -1,0 +1,38 @@
+@use "variables" as v;
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin boton($bgcolor, $colorTexto){
+    background-color: $bgcolor;
+    padding: 2rem 2rem;
+    color: $colorTexto;
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color;
+    transition-duration: .3s;
+
+    @include tablet{
+        width: auto;
+    }
+}
