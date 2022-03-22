@@ -19,7 +19,7 @@
     }
 }
 
-@mixin boton($bgcolor, $colorTexto){
+@mixin boton($bgcolor, $colorTexto) {
     background-color: $bgcolor;
     padding: 2rem 2rem;
     color: $colorTexto;
@@ -30,9 +30,18 @@
     text-align: center;
     text-transform: uppercase;
     transition: background-color;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 
-    @include tablet{
+    @include tablet {
         width: auto;
     }
+    &:hover {
+        background-color: darken($bgcolor, 10%);
+    }
+}
+
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
 }
