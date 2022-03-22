@@ -1,11 +1,11 @@
 const { src, dest, watch, series } = require('gulp');
-// CSS Y SASS 
+
+// CSS y SASS
 const sass = require('gulp-sass')(require('sass'));
-const postcss = require('postcss');
+const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const cssnano = require('cssnano');
-
 
 // Imagenes
 const imagemin = require('gulp-imagemin');
@@ -29,6 +29,14 @@ function imagenes() {
         .pipe(dest('build/img'))
 }
 
+function versionWebp() {
+    const opciones = {
+        quality: 50
+    }
+    return src('src/img/**/*.{png,jpg}')
+        .pipe(webp(opciones))
+        .pipe(dest('build/img'))
+}
 function versionAvif() {
     const opciones = {
         quality: 50
@@ -38,19 +46,11 @@ function versionAvif() {
         .pipe(dest('build/img'))
 }
 
-function versionWebp() {
-    const opciones = {
-        quality: 50
-    }
-    return src('src/img/**/*.{png,jpg}')
-        .pipe(webp(opciones))
-        .pipe(dest('build/img'))
-}
-
 function dev() {
     watch('src/scss/**/*.scss', css);
     watch('src/img/**/*', imagenes);
 }
+
 
 exports.css = css;
 exports.dev = dev;
