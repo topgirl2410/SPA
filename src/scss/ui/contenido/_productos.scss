@@ -20,7 +20,6 @@
 }
 
 .producto {
-
     &__contenido {
         background-color: v.$blanco;
         padding: 2rem;
@@ -28,6 +27,15 @@
 
     &__imagen {
         width: 100%;
+        transition-property: transform;
+        transition-duration: 03s;
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+
+    &__mask {
+        overflow: hidden;
     }
 
     &__nombre {
