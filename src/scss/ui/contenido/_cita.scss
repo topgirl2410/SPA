@@ -2,13 +2,12 @@
 @use "base/mixins" as m;
 
 .cita {
-    background-image: url(../img/bg_citas.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg_citas.jpg); // oscurecer la imagen para que el texto se vea mejor
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
     padding: 5rem 0;
     text-align: center;
-
 
     &__heading {
         @include m.heading;
